@@ -34,7 +34,7 @@ Monorepo, token pipeline, the 10 v1 components (see `docs/SPEC.md` §4), Storybo
 | Task | Who | Learn |
 |---|---|---|
 | [#2](https://github.com/kaushnian/tessera/issues/2) Scaffold monorepo + tooling + CI skeleton | Claude ✅ | Plan mode, permissions, `/init` vs hand-written CLAUDE.md |
-| [#3](https://github.com/kaushnian/tessera/issues/3) Tokens: DTCG JSON → Style Dictionary → CSS vars + TS | Claude | Writing a **skill** ("how to add a token") |
+| [#3](https://github.com/kaushnian/tessera/issues/3) Tokens: DTCG JSON → Style Dictionary → CSS vars + TS | Claude ✅ | Writing a **skill** ("how to add a token") |
 | [#4](https://github.com/kaushnian/tessera/issues/4) Project hooks: typecheck/lint on edit, block raw hex (+ ADR-0004: drop Stylelint) | Claude, you configure | **Hooks** |
 | [#5](https://github.com/kaushnian/tessera/issues/5) Stack, Text, Heading, Button with tests, a11y, stories (+ Storybook) | Claude, TDD | Test-first with agents |
 | [#9](https://github.com/kaushnian/tessera/issues/9) Write the "component contract" doc (by hand!), **before** the parallel batch | **You** | The domain knowledge agents can't invent |

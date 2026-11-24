@@ -44,3 +44,14 @@ Template:
 - How I verified the output: _owner to fill in_ (Claude ran: all five commands in a fresh copy with no node_modules; a second run gave `FULL TURBO`, 9/9 cached; `any`, unchecked index access, bad formatting and wrong `exports` paths each fail.)
 - Cost / context notes: Node 26 has no Corepack, so the owner installed Node 26 and pnpm by hand (`!` commands).
 - What I'd change in CLAUDE.md / skills / hooks: every package build runs publint. For new dependencies, check `pnpm permissions list` before approving anything.
+
+## 2026-11-24 — #3 Token pipeline + `add-token` skill
+- Delegated to agent: planning in plan mode, then building DTCG tokens (primitive → semantic → component), a Style Dictionary build into committed `tokens.css` / `theme.css` / `tokens.ts`, 70 tests, and the `add-token` skill. Then using the skill to add `info` / `info-subtle` in a separate commit as proof.
+- Decisions (owner): Ledgerly accent is deep teal with cool neutrals; spacing, radius and type use t-shirt names (`p-md`, `rounded-lg`, `text-sm`). Claude's calls: colors in oklch using the current DTCG object format; primitives nested under a `primitive` root; semantic values resolved at build time, so primitives never exist at runtime; generated files committed, with a drift test; `erasableSyntaxOnly` + `allowImportingTsExtensions` added to the shared base tsconfig so Node runs the `.ts` build script directly (affects every package); Tailwind defaults reset only in the namespaces Tessera owns (breakpoints and containers stay).
+- What went wrong / surprised me:
+  - The contrast test failed on its first run: teal 600 passed as a button background but was only 4.29:1 as link text on the page background. Light accent moved to teal 700. The test caught a design bug that looked fine by eye.
+  - Primitives and semantics shared group names, so semantic `radius.full` referenced itself (`{radius.full}`), a circular reference. The fix was structural (the `primitive` root), not a rename.
+  - Style Dictionary's default CSS color transform turns oklch into hex, so the pipeline uses a small custom transform.
+  - The plan said to add a pointer to the skill in CLAUDE.md. Left out: the skill's description is already loaded in every session, so a CLAUDE.md line would only duplicate it.
+- How I verified the output: _owner to fill in_ (Claude ran: a clean clone with all tasks green, and broke a dark value, the `@theme` output and a generated file on purpose to watch the right test fail.)
+- What I'd change in CLAUDE.md / skills / hooks: #4's hook can block edits to `src/generated/` and point to the skill instead.

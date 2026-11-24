@@ -1,6 +1,6 @@
 # ADR-0001: Core stack
 
-- Status: Accepted (2026-11-16)
+- Status: Accepted (2026-11-16); "Lint / format" row amended by ADR-0002; "AI layer" eval runner amended by ADR-0003
 - Date: 2026-11-16
 
 ## Context

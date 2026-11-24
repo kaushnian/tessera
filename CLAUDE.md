@@ -5,6 +5,7 @@ A React + TypeScript design system built to be consumed by AI agents (MCP server
 ## Read first
 - `docs/ROADMAP.md`: phases, current status, and who does what
 - `docs/adr/`: accepted decisions. Don't contradict an accepted ADR; propose a new one instead.
+- `docs/SPEC.md`: locked product decisions (pitch, Ledgerly, theming, components, evals, rules manifest)
 - `docs/origin-conversation.md`: the original brief
 
 ## Working agreement

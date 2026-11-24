@@ -18,3 +18,10 @@ Template:
 - Delegated to agent: turning the brainstorm into a roadmap, ADR and CLAUDE.md.
 - What went wrong: Claude couldn't read the claude.ai share link (the page is rendered client-side, and the API route was blocked by permission rules). I pasted the text by hand. Lesson: agents need content in the repo, not behind a browser.
 - How I verified: read the roadmap and ADR myself; accepting ADR-0001 is my call.
+
+## 2026-11-18 — Grill session → SPEC.md, ADR-0002, ADR-0003
+- Delegated to agent: running `/grill-me` on the MVP scope, then writing the answers into `docs/SPEC.md` (§1–11) and ADR-0002.
+- What went wrong / surprised me: the grill exposed that ADR-0001's "Biome for all linting" couldn't enforce AST-level usage rules ("one primary Button per view"), which led to ADR-0002. Later, re-reading the docs before the PR, Claude found SPEC §5 (`claude -p`, no API key) contradicted ADR-0001 ("Agent SDK for evals"), and recorded it as ADR-0003. Decisions made in conversation drift from accepted ADRs unless someone cross-checks them.
+- How I verified the output: _owner to fill in_
+- Cost / context notes: the grill spanned several sessions; the repo docs, not chat history, carried context between them.
+- What I'd change in CLAUDE.md / skills / hooks: when SPEC changes, check it against `docs/adr/` (candidate for a review-subagent checklist item).

@@ -1,0 +1,27 @@
+{
+  "name": "tessera",
+  "private": true,
+  "description": "Tessera: an AI-ready design system",
+  "type": "module",
+  "packageManager": "pnpm@12.23.0",
+  "engines": {
+    "node": ">=26.13.1",
+    "pnpm": ">=12.23.0"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "lint": "turbo run lint lint:root",
+    "lint:root": "biome check biome.json turbo.json package.json vitest.config.ts .changeset/config.json",
+    "test": "turbo run test",
+    "format": "biome check --write .",
+    "changeset": "changeset"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "catalog:",
+    "@changesets/cli": "catalog:",
+    "turbo": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

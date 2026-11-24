@@ -32,3 +32,15 @@ Template:
 - Plan changes vs. the roadmap: the contract doc (#9) moved before the parallel batch so the three subagents follow one contract; the batch became three issues (#6–#8), one per worktree. Decided: `*.rules.yaml` waits for Phase 2; Stylelint is dropped (ADR-0004 in #4).
 - How I verified the output: _owner to fill in_
 - What I'd change in CLAUDE.md / skills / hooks: scripts that make outward-facing changes should be safe to re-run (check whether things already exist before creating them).
+
+## 2026-11-24 — #2 Monorepo scaffold (+ squash-only merges)
+- Delegated to agent: planning in plan mode, then scaffolding pnpm workspaces + catalog, Turborepo, `@tessera/tsconfig`, Biome, Vitest, Changesets, empty `@tessera/tokens` and `@tessera/react`, CI, and the shared `.claude/settings.json` allowlist.
+- Decisions: TypeScript 6.0.3 instead of 7.0.2 (ADR-0005), because TS 7 has no stable JS API and typescript-eslint supports TS below 6.1 only. The repo is now squash-merge only, with the PR title and description as the commit message and head branches deleted on merge (from the #11 merge). Publishing commands are on Claude's deny list, not just left off the allowlist.
+- What went wrong / surprised me:
+  - tsdown wrote `index.mjs`/`index.d.mts`, but `exports` pointed at `.js`/`.d.ts`. Build, typecheck and test all passed anyway, because nothing imports the packages yet. Fix: `platform: "neutral"` + `fixedExtension: false`, plus publint in the build (`failOnWarn`), which now fails the build on that mismatch (checked by breaking it on purpose).
+  - pnpm 12 asked to approve "skills" for tsdown: the package ships an agent skill that tells the agent to fetch and follow instructions from GitHub at runtime, which the lockfile doesn't pin. Denied in `pnpm-workspace.yaml`. Dependencies can now ship instructions for agents, so they're part of the supply chain (input for the Phase 2 threat model).
+  - Biome 2.6 formats Markdown and would have reformatted every doc (padded tables, `*x*` → `_x_`). Markdown formatting is off; Biome's `recommended` setting was migrated to `preset`.
+  - The first draft of the tsconfig included `tsdown.config.ts`, which `isolatedDeclarations` rejects; the self-review hook caught it before anything ran.
+- How I verified the output: _owner to fill in_ (Claude ran: all five commands in a fresh copy with no node_modules; a second run gave `FULL TURBO`, 9/9 cached; `any`, unchecked index access, bad formatting and wrong `exports` paths each fail.)
+- Cost / context notes: Node 26 has no Corepack, so the owner installed Node 26 and pnpm by hand (`!` commands).
+- What I'd change in CLAUDE.md / skills / hooks: every package build runs publint. For new dependencies, check `pnpm permissions list` before approving anything.

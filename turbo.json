@@ -1,0 +1,26 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "!**/*.test.*"],
+      "outputs": ["dist/**"]
+    },
+    "typecheck": {
+      "dependsOn": ["^build"]
+    },
+    "lint": {},
+    "//#lint:root": {
+      "inputs": [
+        "biome.json",
+        "turbo.json",
+        "package.json",
+        "vitest.config.ts",
+        ".changeset/config.json"
+      ]
+    },
+    "test": {
+      "dependsOn": ["^build"]
+    }
+  }
+}

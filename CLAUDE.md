@@ -22,4 +22,17 @@ A React + TypeScript design system built to be consumed by AI agents (MCP server
 - Strict TypeScript, no `any`.
 
 ## Commands
-_To be filled in when the monorepo is scaffolded (Phase 1)._
+Toolchain: Node from `.nvmrc` (`nvm use`) and pnpm from the `packageManager` field. Node 26 has no Corepack, so install pnpm once with `npm i -g pnpm`.
+
+| Task | Command |
+|---|---|
+| Install | `pnpm install` |
+| Build / typecheck / lint / test (all packages, through Turborepo) | `pnpm build` · `pnpm typecheck` · `pnpm lint` · `pnpm test` |
+| Everything CI runs | `pnpm turbo run build typecheck lint lint:root test` |
+| One package | `pnpm --filter @tessera/react test` |
+| Format and auto-fix | `pnpm format` |
+| Record a version bump | `pnpm changeset` |
+
+- Dependency versions live in the `catalog:` in `pnpm-workspace.yaml`. Packages reference `catalog:` and never pin their own versions.
+- TypeScript stays on 6.x (ADR-0005).
+- pnpm asks before a dependency may run build scripts or ship agent skills. Decisions live under `permissions:` in `pnpm-workspace.yaml`. Read what a package wants before approving, and never approve skills that fetch remote instructions.

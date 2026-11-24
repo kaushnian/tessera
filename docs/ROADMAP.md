@@ -20,26 +20,26 @@ issue → plan mode → branch/worktree → tests first → implement → hooks/
 
 ---
 
-## Phase 0 — Setup & spec (now) 🟨
+## Phase 0 — Setup & spec ✅
 | Task | Who | Learn |
 |---|---|---|
 | Save origin brief, roadmap, ADR-0001, CLAUDE.md | Claude ✅ | CLAUDE.md as project memory |
 | Answer the open questions ✅ (Tessera · public · ~10 h/week) | **You** | — |
 | Grill session to lock the MVP scope → `docs/SPEC.md` ✅ | Both | Using skills (`/grill-me`) |
 | Create the public GitHub repo ✅ (kaushnian/tessera) | Claude | `gh` |
-| Create Phase 1 issues | Claude (after your OK) | Issue-driven work |
+| Create Phase 1 issues ✅ ([#2](https://github.com/kaushnian/tessera/issues/2)–[#10](https://github.com/kaushnian/tessera/issues/10), milestone *Phase 1 — Foundation*) | Claude drafts, you post | Issue-driven work |
 
-## Phase 1 — Foundation (weeks 1–2) ⬜
+## Phase 1 — Foundation (weeks 1–2) 🟨
 Monorepo, token pipeline, the 10 v1 components (see `docs/SPEC.md` §4), Storybook, tests, CI.
 | Task | Who | Learn |
 |---|---|---|
-| Scaffold monorepo + tooling + CI skeleton | Claude | Plan mode, permissions, `/init` vs hand-written CLAUDE.md |
-| Tokens: DTCG JSON → Style Dictionary → CSS vars + TS | Claude | Writing a **skill** ("how to add a token") |
-| Project hooks: typecheck/lint on edit, block raw hex | Claude, you configure | **Hooks** |
-| Stack, Text, Heading, Button with tests, a11y, stories | Claude, TDD | Test-first with agents |
-| Card, Input, Field, Select, Dialog, Toast, DataTable **in parallel** | Claude | **Subagents + git worktrees** |
-| Write the "component contract" doc (by hand!) | **You** | The domain knowledge agents can't invent |
-| Visual regression (Playwright) | Claude | Checking agent output |
+| [#2](https://github.com/kaushnian/tessera/issues/2) Scaffold monorepo + tooling + CI skeleton | Claude | Plan mode, permissions, `/init` vs hand-written CLAUDE.md |
+| [#3](https://github.com/kaushnian/tessera/issues/3) Tokens: DTCG JSON → Style Dictionary → CSS vars + TS | Claude | Writing a **skill** ("how to add a token") |
+| [#4](https://github.com/kaushnian/tessera/issues/4) Project hooks: typecheck/lint on edit, block raw hex (+ ADR-0004: drop Stylelint) | Claude, you configure | **Hooks** |
+| [#5](https://github.com/kaushnian/tessera/issues/5) Stack, Text, Heading, Button with tests, a11y, stories (+ Storybook) | Claude, TDD | Test-first with agents |
+| [#9](https://github.com/kaushnian/tessera/issues/9) Write the "component contract" doc (by hand!), **before** the parallel batch | **You** | The domain knowledge agents can't invent |
+| [#6](https://github.com/kaushnian/tessera/issues/6) Card, Input, Field, Select · [#7](https://github.com/kaushnian/tessera/issues/7) Dialog, Toast · [#8](https://github.com/kaushnian/tessera/issues/8) DataTable, **in parallel** | Claude | **Subagents + git worktrees** |
+| [#10](https://github.com/kaushnian/tessera/issues/10) Visual regression (Playwright) | Claude | Checking agent output |
 
 ## Phase 2 — Design-system MCP server (week 3) ⬜
 | Task | Who | Learn |

@@ -25,3 +25,10 @@ Template:
 - How I verified the output: _owner to fill in_
 - Cost / context notes: the grill spanned several sessions; the repo docs, not chat history, carried context between them.
 - What I'd change in CLAUDE.md / skills / hooks: when SPEC changes, check it against `docs/adr/` (candidate for a review-subagent checklist item).
+
+## 2026-11-23 — Phase 1 issues (#2–#10)
+- Delegated to agent: drafting 9 issues with acceptance criteria in plan mode, from ROADMAP + SPEC.
+- What went wrong / surprised me: Claude Code's auto-mode classifier blocked the agent from posting issues to the public repo, so Claude wrote a script and I ran it with `!`. While re-checking, Claude found the first version of the script used a bash 4 feature that macOS bash 3.2 doesn't have; it would have failed after creating some issues. Also, issues and PRs share one counter, so the plan's "#1–#9" became #2–#10.
+- Plan changes vs. the roadmap: the contract doc (#9) moved before the parallel batch so the three subagents follow one contract; the batch became three issues (#6–#8), one per worktree. Decided: `*.rules.yaml` waits for Phase 2; Stylelint is dropped (ADR-0004 in #4).
+- How I verified the output: _owner to fill in_
+- What I'd change in CLAUDE.md / skills / hooks: scripts that make outward-facing changes should be safe to re-run (check whether things already exist before creating them).

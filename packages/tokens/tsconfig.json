@@ -1,0 +1,4 @@
+{
+  "extends": "@tessera/tsconfig/library.json",
+  "include": ["src"]
+}

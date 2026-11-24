@@ -1,0 +1,29 @@
+packages:
+  - packages/*
+
+# One version list for the whole repo (ADR-0001). Packages depend on "catalog:".
+# Versions are exact: bump them here, in one place.
+catalog:
+  "@biomejs/biome": 2.6.8
+  "@changesets/cli": 3.0.3
+  "@types/node": 26.6.6
+  "@types/react": 19.3.0
+  "@types/react-dom": 19.3.0
+  publint: 0.3.25
+  react: 19.3.1
+  react-dom: 19.3.1
+  tsdown: 0.23.7
+  turbo: 2.11.13
+  # 6.x, not 7.x: see docs/adr/0005-typescript-6.md
+  typescript: 6.0.3
+  vitest: 5.1.1
+
+# Fail if a package pins a version outside the catalog.
+catalogMode: strict
+
+# What dependencies may do beyond installing files (pnpm 12). Review each request.
+# tsdown's agent skill is denied: it tells the agent to fetch and follow instructions
+# from GitHub at runtime, which the lockfile doesn't pin (prompt-injection risk).
+permissions:
+  tsdown:
+    skills: false

@@ -66,6 +66,12 @@
     },
     "warning-subtle": {
       "$description": "Background of warning banners."
+    },
+    "info": {
+      "$description": "Informational text and icons: neutral notices such as 'Invoice sent' or 'Sync in progress'."
+    },
+    "info-subtle": {
+      "$description": "Background of informational banners and toasts. Pair with text-info or text-fg."
     }
   }
 }

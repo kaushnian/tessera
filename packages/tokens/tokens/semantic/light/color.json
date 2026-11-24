@@ -65,6 +65,12 @@
     },
     "warning-subtle": {
       "$value": "{primitive.color.amber.50}"
+    },
+    "info": {
+      "$value": "{primitive.color.blue.700}"
+    },
+    "info-subtle": {
+      "$value": "{primitive.color.blue.50}"
     }
   }
 }

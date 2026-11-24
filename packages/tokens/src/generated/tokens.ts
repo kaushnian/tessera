@@ -200,6 +200,24 @@ export const tokens = {
     "dark": "oklch(0.265 0.06 70)",
     "description": "Background of warning banners."
   },
+  "color-info": {
+    "tier": "semantic",
+    "type": "color",
+    "cssVar": "--tsr-color-info",
+    "themeVar": "--color-info",
+    "light": "oklch(0.475 0.135 250)",
+    "dark": "oklch(0.735 0.13 250)",
+    "description": "Informational text and icons: neutral notices such as 'Invoice sent' or 'Sync in progress'."
+  },
+  "color-info-subtle": {
+    "tier": "semantic",
+    "type": "color",
+    "cssVar": "--tsr-color-info-subtle",
+    "themeVar": "--color-info-subtle",
+    "light": "oklch(0.975 0.015 250)",
+    "dark": "oklch(0.265 0.07 250)",
+    "description": "Background of informational banners and toasts. Pair with text-info or text-fg."
+  },
   "radius-sm": {
     "tier": "semantic",
     "type": "dimension",

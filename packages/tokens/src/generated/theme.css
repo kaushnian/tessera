@@ -44,6 +44,8 @@
   --color-success-subtle: var(--tsr-color-success-subtle);
   --color-warning: var(--tsr-color-warning);
   --color-warning-subtle: var(--tsr-color-warning-subtle);
+  --color-info: var(--tsr-color-info);
+  --color-info-subtle: var(--tsr-color-info-subtle);
   --radius-sm: var(--tsr-radius-sm);
   --radius-md: var(--tsr-radius-md);
   --radius-lg: var(--tsr-radius-lg);

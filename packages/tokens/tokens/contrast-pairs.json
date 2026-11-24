@@ -88,6 +88,18 @@
     {
       "fg": "warning",
       "bg": "warning-subtle"
+    },
+    {
+      "fg": "info",
+      "bg": "surface"
+    },
+    {
+      "fg": "info",
+      "bg": "info-subtle"
+    },
+    {
+      "fg": "fg",
+      "bg": "info-subtle"
     }
   ],
   "ui": [

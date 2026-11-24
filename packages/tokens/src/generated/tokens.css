@@ -24,6 +24,8 @@
   --tsr-color-success-subtle: oklch(0.975 0.025 150);
   --tsr-color-warning: oklch(0.405 0.1 70);
   --tsr-color-warning-subtle: oklch(0.975 0.03 70);
+  --tsr-color-info: oklch(0.475 0.135 250);
+  --tsr-color-info-subtle: oklch(0.975 0.015 250);
   --tsr-radius-sm: 4px;
   --tsr-radius-md: 6px;
   --tsr-radius-lg: 8px;
@@ -86,6 +88,8 @@
   --tsr-color-success-subtle: oklch(0.265 0.06 150);
   --tsr-color-warning: oklch(0.825 0.135 70);
   --tsr-color-warning-subtle: oklch(0.265 0.06 70);
+  --tsr-color-info: oklch(0.735 0.13 250);
+  --tsr-color-info-subtle: oklch(0.265 0.07 250);
   --tsr-shadow-sm: 0px 1px 2px 0px oklch(0 0 0 / 0.4);
   --tsr-shadow-md: 0px 4px 12px -2px oklch(0 0 0 / 0.5);
   --tsr-shadow-lg: 0px 12px 32px -4px oklch(0 0 0 / 0.6);

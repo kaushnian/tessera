@@ -1,0 +1,119 @@
+{
+  "$description": "Color pairs checked for WCAG 2.x contrast in light and dark mode. text: 4.5:1 (SC 1.4.3). ui: 3:1 for control outlines, focus indicators and other non-text (SC 1.4.11). Add a pair for every new foreground or background color.",
+  "text": [
+    {
+      "fg": "fg",
+      "bg": "bg"
+    },
+    {
+      "fg": "fg",
+      "bg": "surface"
+    },
+    {
+      "fg": "fg",
+      "bg": "surface-raised"
+    },
+    {
+      "fg": "fg",
+      "bg": "surface-sunken"
+    },
+    {
+      "fg": "fg",
+      "bg": "accent-subtle"
+    },
+    {
+      "fg": "fg",
+      "bg": "danger-subtle"
+    },
+    {
+      "fg": "fg-muted",
+      "bg": "bg"
+    },
+    {
+      "fg": "fg-muted",
+      "bg": "surface"
+    },
+    {
+      "fg": "fg-muted",
+      "bg": "surface-sunken"
+    },
+    {
+      "fg": "fg-on-accent",
+      "bg": "accent"
+    },
+    {
+      "fg": "fg-on-accent",
+      "bg": "accent-hover"
+    },
+    {
+      "fg": "accent",
+      "bg": "surface"
+    },
+    {
+      "fg": "accent",
+      "bg": "bg"
+    },
+    {
+      "fg": "accent",
+      "bg": "accent-subtle"
+    },
+    {
+      "fg": "fg-on-danger",
+      "bg": "danger"
+    },
+    {
+      "fg": "fg-on-danger",
+      "bg": "danger-hover"
+    },
+    {
+      "fg": "danger",
+      "bg": "surface"
+    },
+    {
+      "fg": "danger",
+      "bg": "danger-subtle"
+    },
+    {
+      "fg": "success",
+      "bg": "surface"
+    },
+    {
+      "fg": "success",
+      "bg": "success-subtle"
+    },
+    {
+      "fg": "warning",
+      "bg": "surface"
+    },
+    {
+      "fg": "warning",
+      "bg": "warning-subtle"
+    }
+  ],
+  "ui": [
+    {
+      "fg": "border-strong",
+      "bg": "surface"
+    },
+    {
+      "fg": "border-strong",
+      "bg": "bg"
+    },
+    {
+      "fg": "focus-ring",
+      "bg": "bg"
+    },
+    {
+      "fg": "focus-ring",
+      "bg": "surface"
+    },
+    {
+      "fg": "accent",
+      "bg": "bg"
+    },
+    {
+      "fg": "danger",
+      "bg": "bg"
+    }
+  ]
+}

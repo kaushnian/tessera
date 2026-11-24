@@ -1,0 +1,13 @@
+{
+  "shadow": {
+    "sm": {
+      "$value": "{primitive.shadow.1}"
+    },
+    "md": {
+      "$value": "{primitive.shadow.2}"
+    },
+    "lg": {
+      "$value": "{primitive.shadow.3}"
+    }
+  }
+}

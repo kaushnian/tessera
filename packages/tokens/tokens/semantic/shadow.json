@@ -1,0 +1,14 @@
+{
+  "shadow": {
+    "$type": "shadow",
+    "sm": {
+      "$description": "Subtle lift: buttons, inputs on hover."
+    },
+    "md": {
+      "$description": "Menus, popovers, toasts (with surface-raised)."
+    },
+    "lg": {
+      "$description": "Dialogs."
+    }
+  }
+}

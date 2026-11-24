@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "description": "Tessera design tokens: DTCG source compiled to CSS variables, Tailwind @theme and TypeScript",
   "type": "module",
-  "sideEffects": false,
+  "sideEffects": [
+    "*.css"
+  ],
   "files": [
     "dist"
   ],
@@ -12,18 +14,25 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
+    "./tokens.css": "./dist/tokens.css",
+    "./theme.css": "./dist/theme.css",
     "./package.json": "./package.json"
   },
   "scripts": {
+    "tokens": "node scripts/build-tokens.ts",
     "build": "tsdown",
     "typecheck": "tsc --noEmit",
     "lint": "biome check .",
     "test": "vitest run --passWithNoTests"
   },
   "devDependencies": {
+    "@tailwindcss/node": "catalog:",
     "@tessera/tsconfig": "workspace:*",
     "@types/node": "catalog:",
+    "colorjs.io": "catalog:",
     "publint": "catalog:",
+    "style-dictionary": "catalog:",
+    "tailwindcss": "catalog:",
     "tsdown": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:"

@@ -1,0 +1,108 @@
+{
+  "font": {
+    "$type": "fontFamily",
+    "sans": {
+      "$value": "{primitive.font-family.inter}",
+      "$description": "UI and body text. Apps load Inter themselves; system fonts are the fallback."
+    },
+    "mono": {
+      "$value": "{primitive.font-family.jetbrains-mono}",
+      "$description": "Code, IDs, invoice numbers and other tabular strings."
+    }
+  },
+  "font-weight": {
+    "$type": "fontWeight",
+    "regular": {
+      "$value": "{primitive.font-weight.400}",
+      "$description": "Body text."
+    },
+    "medium": {
+      "$value": "{primitive.font-weight.500}",
+      "$description": "Labels, buttons, table headers."
+    },
+    "semibold": {
+      "$value": "{primitive.font-weight.600}",
+      "$description": "Headings and emphasis."
+    }
+  },
+  "text": {
+    "$description": "Font size with its line height. Tailwind: text-sm sets both.",
+    "xs": {
+      "size": {
+        "$type": "dimension",
+        "$value": "{primitive.font-size.12}",
+        "$description": "Captions, table metadata."
+      },
+      "line-height": {
+        "$type": "number",
+        "$value": "{primitive.line-height.normal}"
+      }
+    },
+    "sm": {
+      "size": {
+        "$type": "dimension",
+        "$value": "{primitive.font-size.14}",
+        "$description": "Default UI text: tables, form labels, buttons."
+      },
+      "line-height": {
+        "$type": "number",
+        "$value": "{primitive.line-height.normal}"
+      }
+    },
+    "md": {
+      "size": {
+        "$type": "dimension",
+        "$value": "{primitive.font-size.16}",
+        "$description": "Body text in longer content."
+      },
+      "line-height": {
+        "$type": "number",
+        "$value": "{primitive.line-height.normal}"
+      }
+    },
+    "lg": {
+      "size": {
+        "$type": "dimension",
+        "$value": "{primitive.font-size.18}",
+        "$description": "Card titles, small headings."
+      },
+      "line-height": {
+        "$type": "number",
+        "$value": "{primitive.line-height.snug}"
+      }
+    },
+    "xl": {
+      "size": {
+        "$type": "dimension",
+        "$value": "{primitive.font-size.20}",
+        "$description": "Section headings."
+      },
+      "line-height": {
+        "$type": "number",
+        "$value": "{primitive.line-height.snug}"
+      }
+    },
+    "2xl": {
+      "size": {
+        "$type": "dimension",
+        "$value": "{primitive.font-size.24}",
+        "$description": "Page headings."
+      },
+      "line-height": {
+        "$type": "number",
+        "$value": "{primitive.line-height.tight}"
+      }
+    },
+    "3xl": {
+      "size": {
+        "$type": "dimension",
+        "$value": "{primitive.font-size.30}",
+        "$description": "Hero and empty-state headings."
+      },
+      "line-height": {
+        "$type": "number",
+        "$value": "{primitive.line-height.tight}"
+      }
+    }
+  }
+}

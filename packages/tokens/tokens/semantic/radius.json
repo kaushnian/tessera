@@ -1,0 +1,25 @@
+{
+  "radius": {
+    "$type": "dimension",
+    "sm": {
+      "$value": "{primitive.radius.2}",
+      "$description": "4px. Badges, checkboxes, small chips."
+    },
+    "md": {
+      "$value": "{primitive.radius.3}",
+      "$description": "6px. Default for controls and small surfaces."
+    },
+    "lg": {
+      "$value": "{primitive.radius.4}",
+      "$description": "8px. Cards, dialogs, popovers."
+    },
+    "xl": {
+      "$value": "{primitive.radius.6}",
+      "$description": "12px. Large feature panels."
+    },
+    "full": {
+      "$value": "{primitive.radius.full}",
+      "$description": "Pills and avatars."
+    }
+  }
+}

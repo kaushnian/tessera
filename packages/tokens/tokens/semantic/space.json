@@ -1,0 +1,37 @@
+{
+  "spacing": {
+    "$type": "dimension",
+    "2xs": {
+      "$value": "{primitive.space.0_5}",
+      "$description": "2px. Hairline gaps, e.g. between an icon and a badge."
+    },
+    "xs": {
+      "$value": "{primitive.space.1}",
+      "$description": "4px. Tight gaps inside a control."
+    },
+    "sm": {
+      "$value": "{primitive.space.2}",
+      "$description": "8px. Gap between related items: label and input, icon and text."
+    },
+    "md": {
+      "$value": "{primitive.space.3}",
+      "$description": "12px. Default gap inside a component or a form row."
+    },
+    "lg": {
+      "$value": "{primitive.space.4}",
+      "$description": "16px. Padding of cards and dialogs; gap between form fields."
+    },
+    "xl": {
+      "$value": "{primitive.space.6}",
+      "$description": "24px. Gap between sections inside a page."
+    },
+    "2xl": {
+      "$value": "{primitive.space.8}",
+      "$description": "32px. Page padding and gaps between major regions."
+    },
+    "3xl": {
+      "$value": "{primitive.space.12}",
+      "$description": "48px. Large empty-state and page-header spacing."
+    }
+  }
+}

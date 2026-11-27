@@ -1,0 +1,77 @@
+{
+  "color": {
+    "$type": "color",
+    "bg": {
+      "$description": "Page background behind all surfaces."
+    },
+    "surface": {
+      "$description": "Default background for cards, panels, dialogs and inputs."
+    },
+    "surface-raised": {
+      "$description": "Background for elements above a surface: menus, popovers, toasts. Pair with shadow-md."
+    },
+    "surface-sunken": {
+      "$description": "Recessed areas inside a surface: table headers, code blocks, wells."
+    },
+    "overlay": {
+      "$description": "Scrim behind modal dialogs. Translucent; never use for text."
+    },
+    "fg": {
+      "$description": "Default text and icons."
+    },
+    "fg-muted": {
+      "$description": "Secondary text: descriptions, helper text, metadata. Still meets AA on surface and bg."
+    },
+    "fg-on-accent": {
+      "$description": "Text and icons on bg-accent (primary Button)."
+    },
+    "border": {
+      "$description": "Dividers and decorative borders. Not enough contrast for input outlines."
+    },
+    "border-strong": {
+      "$description": "Outlines of inputs and other controls (meets 3:1 non-text contrast)."
+    },
+    "focus-ring": {
+      "$description": "Keyboard focus indicator for every interactive element."
+    },
+    "accent": {
+      "$description": "Ledgerly brand color: primary actions, links, selected states."
+    },
+    "accent-hover": {
+      "$description": "Hover and pressed state of bg-accent."
+    },
+    "accent-subtle": {
+      "$description": "Tinted background for selected rows and highlighted areas."
+    },
+    "danger": {
+      "$description": "Destructive actions and error text, e.g. the confirm step of a destructive dialog."
+    },
+    "danger-hover": {
+      "$description": "Hover and pressed state of bg-danger."
+    },
+    "danger-subtle": {
+      "$description": "Background of error banners and invalid-field messages."
+    },
+    "fg-on-danger": {
+      "$description": "Text and icons on bg-danger (destructive Button)."
+    },
+    "success": {
+      "$description": "Success text and icons: 'Saved', paid invoices."
+    },
+    "success-subtle": {
+      "$description": "Background of success banners and toasts."
+    },
+    "warning": {
+      "$description": "Warning text and icons: past-due invoices, expiring cards."
+    },
+    "warning-subtle": {
+      "$description": "Background of warning banners."
+    },
+    "info": {
+      "$description": "Informational text and icons: neutral notices such as 'Invoice sent' or 'Sync in progress'."
+    },
+    "info-subtle": {
+      "$description": "Background of informational banners and toasts. Pair with text-info or text-fg."
+    }
+  }
+}

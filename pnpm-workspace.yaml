@@ -6,12 +6,16 @@ packages:
 catalog:
   "@biomejs/biome": 2.6.8
   "@changesets/cli": 3.0.3
+  "@tailwindcss/node": 4.3.5
   "@types/node": 26.6.6
   "@types/react": 19.3.0
   "@types/react-dom": 19.3.0
+  colorjs.io: 0.7.1
   publint: 0.3.25
   react: 19.3.1
   react-dom: 19.3.1
+  style-dictionary: 5.8.0
+  tailwindcss: 4.3.5
   tsdown: 0.23.7
   turbo: 2.11.13
   # 6.x, not 7.x: see docs/adr/0005-typescript-6.md
